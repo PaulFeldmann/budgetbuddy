@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BUDGETBUDDY hilft Studierenden, ihr Budget im Blick zu behalten – mit Ausgabenprognosen und cleveren Einkaufsplänen.">
+<title>BUDGETBUDDY – Mehr aus deinem Budget machen</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--green:#087653;--deep:#063d31;--mint:#dff5e9;--lime:#b9edcf;--ink:#102b25;--muted:#60746d;--paper:#fbfdfb;--line:#e4eee8;--coral:#fff0ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font:800 25px Manrope,sans-serif;letter-spacing:-1.2px}.brandmark{width:38px;height:38px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-size:21px}.brand span:last-child{color:var(--green)}nav{display:flex;gap:32px;align-items:center;font-size:14px;font-weight:600;color:#4b625a}nav a:hover{color:var(--green)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--deep);color:#fff;border-radius:999px;padding:14px 21px;font-weight:700;border:0;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{background:var(--green);transform:translateY(-2px)}.menu{display:none;background:none;border:0;font-size:25px}
+.hero{position:relative;overflow:hidden;padding:66px 0 74px;background:radial-gradient(ellipse at 77% 35%,#d8f5e4 0,transparent 37%),linear-gradient(120deg,#f7fcf8,#effaf2 58%,#e5f7ec);border-radius:0 0 42px 42px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;background:#d5f1e1;border-radius:999px;color:#176447;font-size:13px;font-weight:700}.hero h1{font:800 clamp(48px,6.3vw,78px)/.99 Manrope,sans-serif;letter-spacing:-4px;margin:24px 0 16px}.hero h1 span{color:var(--green)}.lead{font-size:19px;line-height:1.65;color:#49635a;max-width:560px}.hero-actions{display:flex;align-items:center;gap:20px;margin-top:28px}.text-link{font-weight:700;color:var(--green)}.micro{font-size:12px;color:#6e8279;margin-top:22px}.visual{position:relative;min-height:470px;display:grid;place-items:center}.orb{position:absolute;width:390px;height:390px;border-radius:50%;background:linear-gradient(145deg,#c9efd9,#eaf9ef);right:5%;top:7%}.phone{position:relative;z-index:2;width:270px;padding:11px;border:7px solid #173b31;border-radius:39px;background:#fdfefd;box-shadow:0 30px 65px #164a3328;transform:rotate(5deg)}.screen{border-radius:25px;background:#f4f8f5;padding:19px 15px 16px;min-height:430px}.notch{width:76px;height:17px;border-radius:20px;background:#15372f;margin:-12px auto 19px}.hello{font-size:13px;color:#597068}.screen h3{font:800 22px Manrope;margin:5px 0 13px}.balance{background:linear-gradient(135deg,#0c8a60,#07523f);color:white;padding:17px;border-radius:17px}.balance small{opacity:.8}.balance strong{display:block;font:800 34px Manrope;margin:4px 0}.chartbox,.listbox{background:white;border-radius:15px;padding:13px;margin-top:12px}.chart-title{font-size:11px;font-weight:700}.chart{height:76px;margin-top:9px;position:relative;border-bottom:1px solid #e6eee9;background:repeating-linear-gradient(to bottom,transparent 0 24px,#edf3ef 25px 26px)}.chart svg{width:100%;height:100%;overflow:visible}.listrow{display:flex;justify-content:space-between;font-size:11px;padding:8px 0;border-bottom:1px solid #eef2ef}.listrow:last-child{border:0}.coin{position:absolute;z-index:1;border-radius:50%;background:linear-gradient(140deg,#ffdc83,#d99a2d);box-shadow:inset 0 0 0 5px #f3c65f,0 12px 24px #a87c2c30;color:#8b5a11;display:grid;place-items:center;font-weight:800}.coin.one{width:82px;height:82px;right:0;bottom:49px;font-size:29px}.coin.two{width:53px;height:53px;left:5%;bottom:30px;font-size:20px}.spark{position:absolute;color:var(--green);font-size:35px}.spark.s1{right:7%;top:11%}.spark.s2{left:4%;top:34%}
+.section{padding:92px 0}.section-kicker{color:var(--green);font-weight:800;font-size:12px;letter-spacing:1.7px;text-transform:uppercase}.section h2{font:800 clamp(32px,4vw,47px)/1.12 Manrope;letter-spacing:-1.8px;margin:12px 0 15px}.section-intro{max-width:650px;color:var(--muted);font-size:17px;line-height:1.7}.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}.panel{padding:30px;border-radius:25px;min-height:230px}.panel.problem{background:var(--coral)}.panel.solution{background:#e6f6ec}.panel-icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:21px;background:white;margin-bottom:18px}.panel h3{font:800 22px Manrope;margin:0 0 10px}.panel p{color:#536960;line-height:1.65;margin:0;max-width:440px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}.feature{padding:24px 20px;border:1px solid var(--line);border-radius:20px;background:white}.feature-icon{width:48px;height:48px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:23px}.feature h3{font:800 17px Manrope;margin:18px 0 8px}.feature p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.demo{background:var(--deep);color:white;border-radius:32px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.demo h2{font:800 38px/1.12 Manrope;letter-spacing:-1.5px;margin:12px 0}.demo p{color:#c4ddd2;line-height:1.7}.demo-card{background:#fff;color:var(--ink);border-radius:22px;padding:25px}.demo-card label{font-size:13px;font-weight:700;display:block;margin-bottom:8px}.demo-card input{width:100%;accent-color:var(--green);margin:7px 0 17px}.demo-value{font:800 42px Manrope;color:var(--green)}.demo-result{background:#eaf7ef;border-radius:14px;padding:15px;margin-top:13px;color:#315b49;font-size:14px;line-height:1.55}.disclaimer{font-size:11px;color:#8da79a;margin-top:12px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}.step{border-top:2px solid var(--line);padding:22px 8px 0}.step-num{font:800 13px Manrope;color:var(--green)}.step h3{font:800 19px Manrope;margin:10px 0}.step p{color:var(--muted);line-height:1.6;font-size:14px}
+.feedback{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center;background:#f0f8f2;padding:38px;border-radius:28px}.quote{font:700 22px/1.5 Manrope;letter-spacing:-.5px}.quote small{display:block;font:500 13px "DM Sans";color:var(--muted);margin-top:14px}.learn{background:white;border-radius:20px;padding:25px}.learn h3{font:800 18px Manrope;margin:0 0 10px}.learn p{color:var(--muted);line-height:1.65;margin:0}.note{font-size:11px;color:#82938b;margin-top:12px}
+footer{background:#052f27;color:white;margin-top:90px;padding:55px 0 28px;border-radius:36px 36px 0 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.footer-inner h2{font:800 34px Manrope;letter-spacing:-1px;margin:0 0 8px}.footer-inner p{color:#c3ddd1;margin:0}.footer-bottom{border-top:1px solid #ffffff25;margin-top:40px;padding-top:20px;color:#9cb9ad;font-size:12px;display:flex;justify-content:space-between;gap:15px}
+@media(max-width:850px){nav{gap:16px}.hero-grid{grid-template-columns:1fr}.hero-copy{max-width:680px}.visual{min-height:440px}.features{grid-template-columns:repeat(2,1fr)}.demo{grid-template-columns:1fr}.feedback{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,1160px)}header{height:70px}.brand{font-size:22px}nav{display:none;position:absolute;top:68px;left:16px;right:16px;background:white;padding:20px;border-radius:18px;box-shadow:0 15px 35px #153c2c20;z-index:10;flex-direction:column;align-items:stretch}.nav-cta{display:none}.menu{display:block;color:var(--deep)}nav.open{display:flex}.hero{padding:45px 0 48px}.hero h1{font-size:51px;letter-spacing:-3px}.lead{font-size:16px}.hero-actions{align-items:flex-start;flex-direction:column;gap:15px}.visual{min-height:390px}.orb{width:300px;height:300px;right:2%}.phone{width:238px;transform:rotate(3deg)}.screen{min-height:390px}.coin.one{right:-2%;bottom:25px}.coin.two{left:0;bottom:12px}.section{padding:68px 0}.problem-grid{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr;gap:10px}.feature{padding:18px 14px}.feature h3{font-size:15px}.demo{padding:26px 20px}.demo h2{font-size:31px}.steps{grid-template-columns:1fr;gap:10px}.feedback{padding:24px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-inner h2{font-size:29px}.footer-bottom{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="#start" aria-label="BudgetBuddy Startseite"><span class="brandmark">€</span>Budget<span>Buddy</span></a>
+  <nav id="nav"><a href="#idee">Die Idee</a><a href="#features">Features</a><a href="#so-funktionierts">So funktioniert's</a><a href="#feedback">Feedback</a></nav>
+  <a class="nav-cta" href="#demo">Demo ansehen <span>↗</span></a>
+  <button class="menu" id="menu" aria-label="Menü öffnen">☰</button>
+</header>
+
+<main id="start">
+<section class="hero">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow">🎓 Smarter Budgeting. Happier Studying.</div>
+   <h1>Mit <span>50 Euro</span><br>mehr aus dem<br>Monat machen.</h1>
+   <p class="lead">Dein smarter Finanzassistent fürs Studium. Behalte den Überblick, erkenne Sparpotenziale und plane deine Einkäufe passend zu deinem Budget.</p>
+   <div class="hero-actions"><a class="btn" href="#demo">So funktioniert's <span>→</span></a><a class="text-link" href="#idee">Mehr über die Idee ↓</a></div>
+   <p class="micro">Mehr Überblick. Bessere Entscheidungen. Weniger Monatsende-Stress.</p>
+  </div>
+  <div class="visual" aria-label="Illustration eines Smartphone-Dashboards">
+   <div class="orb"></div><span class="spark s1">✳</span><span class="spark s2">✦</span>
+   <div class="phone"><div class="screen"><div class="notch"></div><div class="hello">Hallo! 👋 Dein Budget im Blick</div><h3>Dein Überblick</h3>
+    <div class="balance"><small>Verfügbar für die nächsten 10 Tage</small><strong>85 €</strong><small>Dein Budget – klar und einfach.</small></div>
+    <div class="chartbox"><div class="chart-title">DEINE AUSGABEN</div><div class="chart"><svg viewBox="0 0 220 76" preserveAspectRatio="none"><path d="M0 55 C25 8 38 60 65 38 S100 18 125 48 S160 65 182 30 S205 28 220 17" fill="none" stroke="#0b9367" stroke-width="3" stroke-linecap="round"/><path d="M0 55 C25 8 38 60 65 38 S100 18 125 48 S160 65 182 30 S205 28 220 17 L220 76 L0 76Z" fill="#dff4e7" opacity=".8"/></svg></div></div>
+    <div class="listbox"><div class="chart-title">DEIN EINKAUFSPLAN <span style="float:right;color:#0b9367">● Optimiert</span></div><div class="listrow"><span>🥕 Gemüse & Reis</span><b>8,40 €</b></div><div class="listrow"><span>🥣 Frühstück</span><b>5,20 €</b></div><div class="listrow"><span>🍝 Abendessen</span><b>11,60 €</b></div></div>
+   </div></div>
+   <div class="coin one">€</div><div class="coin two">€</div>
+  </div>
+ </div>
+</section>
+
+<section class="section wrap" id="idee">
+ <div class="section-kicker">Das Problem – und unsere Antwort</div><h2>Weniger rätseln.<br>Mehr vom Geld haben.</h2>
+ <p class="section-intro">Viele Studierende kennen das Gefühl: Der Monat ist noch nicht vorbei, aber das Budget wird knapp. BUDGETBUDDY macht aus vergangenen Ausgaben konkrete Hilfestellung für die nächsten Entscheidungen.</p>
+ <div class="problem-grid">
+  <article class="panel problem"><div class="panel-icon">😵‍💫</div><h3>Das Problem</h3><p>Wie viel kann ich diese Woche noch ausgeben? Reicht das Geld bis Monatsende? Viele verlieren bei kleinen Alltagsausgaben schnell den Überblick.</p></article>
+  <article class="panel solution"><div class="panel-icon">🌱</div><h3>Die Lösung</h3><p>BUDGETBUDDY analysiert Ausgaben, erkennt persönliche Muster und gibt eine verständliche Einschätzung, wie weit das verbleibende Budget reicht – inklusive konkreter Einkaufsimpulse.</p></article>
+ </div>
+</section>
+
+<section class="section wrap" id="features">
+ <div class="section-kicker">Mehr als Budget-Tracking</div><h2>Dein Geld. Deine Muster.<br>Deine smarten Möglichkeiten.</h2>
+ <p class="section-intro">Die App verbindet Datenanalyse mit praktischen Empfehlungen, die sich in den studentischen Alltag integrieren lassen.</p>
+ <div class="features">
+  <article class="feature"><div class="feature-icon">📈</div><h3>Ausgabenprognosen</h3><p>Erkenne frühzeitig, wann dein Budget knapp werden könnte.</p></article>
+  <article class="feature"><div class="feature-icon">🧩</div><h3>Persönliche Muster</h3><p>Entdecke wiederkehrende Ausgaben und individuelle Konsumgewohnheiten.</p></article>
+  <article class="feature"><div class="feature-icon">🏷️</div><h3>Preisvergleiche</h3><p>Finde preisbewusste Einkaufsoptionen in deiner Umgebung.</p></article>
+  <article class="feature"><div class="feature-icon">🛒</div><h3>Optimierte Einkaufspläne</h3><p>Erhalte Einkaufslisten und Essensideen passend zu deinem Restbudget.</p></article>
+ </div>
+</section>
+
+<section class="section wrap" id="demo">
+ <div class="demo">
+  <div><div class="section-kicker" style="color:#9fe5bd">Ein Beispiel aus dem Alltag</div><h2>Was ist mit 85 Euro noch drin?</h2><p>Stell dir vor, du hast noch zehn Tage bis zum Monatsende. BUDGETBUDDY hilft dir, dein Geld sinnvoll aufzuteilen und einen realistischen Rahmen für deine Einkäufe zu finden.</p><p style="font-size:13px">Die Demo ist ein vereinfachtes Rechenbeispiel – noch keine echte Budgetprognose.</p></div>
+  <div class="demo-card"><label for="budget">Dein verfügbares Budget</label><div class="demo-value"><span id="budgetNum">85</span> €</div><input id="budget" type="range" min="20" max="250" step="5" value="85"><label for="days">Noch verbleibende Tage</label><div style="display:flex;align-items:center;gap:12px"><input id="days" type="range" min="3" max="30" value="10"><b><span id="daysNum">10</span></b></div><div class="demo-result" id="result">Das entspricht <b>8,50 € pro Tag</b>. Plane deine Einkäufe bewusst und halte einen kleinen Puffer zurück.</div><div class="disclaimer">Illustrative Berechnung. Keine Finanzberatung.</div></div>
+ </div>
+</section>
+
+<section class="section wrap" id="so-funktionierts">
+ <div class="section-kicker">Einfach. Persönlich. Vorausschauend.</div><h2>So funktioniert BUDGETBUDDY</h2>
+ <div class="steps">
+  <article class="step"><div class="step-num">01 / VERSTEHEN</div><h3>Ausgaben erfassen</h3><p>Du gibst deine Ausgaben ein oder importierst sie perspektivisch über eine sichere Schnittstelle.</p></article>
+  <article class="step"><div class="step-num">02 / ERKENNEN</div><h3>Muster analysieren</h3><p>Data-Science-Modelle erkennen Kategorien, Gewohnheiten und mögliche Budgetengpässe.</p></article>
+  <article class="step"><div class="step-num">03 / VERBESSERN</div><h3>Konkrete Tipps erhalten</h3><p>Du bekommst verständliche Prognosen und Einkaufsimpulse, die zu deinem Budget passen.</p></article>
+ </div>
+</section>
+
+<section class="section wrap" id="feedback">
+ <div class="section-kicker">Nutzerzentriert gedacht</div><h2>Ein guter Sparplan beginnt mit Zuhören.</h2>
+ <div class="feedback">
+  <div><div class="quote">„Nicht nur zeigen, wofür das Geld weg ist – sondern was ich mit dem Rest noch machen kann.“</div><small style="color:#60746d">Eine zentrale Hypothese, die ich in Gesprächen mit Studierenden überprüfen möchte.</small></div>
+  <div class="learn"><h3>Was ich durch erstes Feedback überprüfen möchte</h3><p>Ist die Budgetprognose tatsächlich hilfreich? Welche konkreten Empfehlungen würden Studierende im Alltag nutzen? Erste Gespräche sollen zeigen, ob Einkaufspläne und umsetzbare Spartipps einen größeren Mehrwert bieten als reines Ausgaben-Tracking.</p><div class="note">Feedback-Bereich als Konzept formuliert – durch echte Rückmeldungen aus Gesprächen ergänzen.</div></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="footer-inner"><div><h2>Dein Studium. Dein Budget.<br>Dein BUDGETBUDDY.</h2><p>Mehr Kontrolle. Mehr Freiheit. Mehr du.</p></div><a class="btn" href="#start" style="background:#c9f2d9;color:#063d31">Zurück nach oben ↑</a></div><div class="footer-bottom"><span>© 2026 BUDGETBUDDY · Startup-Konzept</span><span>Smarter Budgeting. Happier Studying.</span></div></div></footer>
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const budget=document.getElementById('budget'),days=document.getElementById('days');
+function update(){const b=Number(budget.value),d=Number(days.value),daily=b/d;document.getElementById('budgetNum').textContent=b;document.getElementById('daysNum').textContent=d;document.getElementById('result').innerHTML=`Das entspricht <b>${daily.toLocaleString('de-DE',{style:'currency',currency:'EUR'})} pro Tag</b>. Plane deine Einkäufe bewusst und halte einen kleinen Puffer zurück.`}
+budget.addEventListener('input',update);days.addEventListener('input',update);update();
+</script>
+</body></html>
